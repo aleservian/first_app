@@ -10,17 +10,17 @@ var {
   TouchableOpacity,
 } = React;
 class Scroll extends Component{
-  constructor(props) {
-    super(props);
-  }
+   constructor(props) {
+     super(props);
+   }
    _handlePress(){
-     this.props.navigator.push({name: 'Contato',component: PageTwo});
+     this.props.navigator.pop();
    }
    render(){
       return (
         <View style={styles.container} >
          <TouchableOpacity style={styles.buttonTest} onPress={this._handlePress.bind(this)}>
-           <Text style={styles.buttonText}>Contato</Text>
+           <Text style={styles.buttonText}>Voltar</Text>
          </TouchableOpacity>
          <ScrollView automaticallyAdjustContentInsets={false}>
            <Text>

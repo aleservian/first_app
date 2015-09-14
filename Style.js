@@ -48,7 +48,7 @@ var style = StyleSheet.create({
     backgroundColor: '#fd5d05',
     height: 40,
     alignSelf: 'center',//centraliza o pai
-    width: 100,
+    width: 150,
     borderRadius: 5,
     marginTop: 5,
     marginBottom: 5,

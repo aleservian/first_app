@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react-native'),
-    Scroll = require('./components/Scroll.js'),
     NavBar = require('./components/NavBar.js'),
+    Home = require('./page/Home.js'),
     styles = require('./Style.js');
 var {
   AppRegistry,
@@ -39,46 +39,13 @@ var CustomSceneConfig = Object.assign({}, BaseConfig, {
     pop: CustomLeftToRightGesture,
   }
 });
-class HomePage extends Component{
-  constructor(props) {
-    super(props);
-  }
-   _handlePress(){
-     this.props.navigator.push({name: 'Scroll',component: Scroll});
-   }
-   render(){
-      return (
-        <View style={styles.container} >
-         <TouchableOpacity style={styles.buttonTest} onPress={this._handlePress.bind(this)}>
-           <Text style={styles.buttonText}>Scroll</Text>
-         </TouchableOpacity>
-        </View> 
-      )
-   }
-}
 
-class PageTwo extends Component{
-  constructor(props) {
-    super(props);
-  }
-   _handlePress(){
-     this.props.navigator.pop();
-   }
-  render(){
-    return (
-       <View style={styles.container} >
-           <TouchableOpacity style={styles.buttonTest} onPress={this._handlePress.bind(this)}>
-             <Text style={styles.buttonText}>Home</Text>
-           </TouchableOpacity>
-        </View> 
-    )
-  }
-}
+
 var firstRoute = {
   name: 'Home',
-  component: HomePage
+  component: Home
 }
-class Home extends Component{
+class Index extends Component{
   constructor(props) {
      super(props);
      this.state = {
@@ -112,4 +79,4 @@ class Home extends Component{
     );
   }
 }
-AppRegistry.registerComponent('first_app', () => Home);
+AppRegistry.registerComponent('first_app', () => Index);
