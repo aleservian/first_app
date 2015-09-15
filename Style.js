@@ -58,6 +58,12 @@ var style = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     // textAlign: 'center'
+  },
+  map:{
+    flex: 1,
+    borderWidth: 1,
+    marginTop: 10,
+    borderColor: '#000000'
   }
 });
 module.exports = style;
